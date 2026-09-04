@@ -25,7 +25,7 @@ body {
 }
 
 /* ==========================================
-   🌸 PASSO 3: TÍTULO PRINCIPAL - SÓ O KAMOJI (sem o "a"!)
+   🌸 PASSO 3: TÍTULO PRINCIPAL - SÓ O KAMOJI
    ========================================== */
 h1 {
     font-size: 80px;
@@ -41,7 +41,7 @@ h1 {
 }
 
 /* ==========================================
-   🎀 PASSO 4: TÍTULOS DAS CATEGORIAS - SEM FUNDO, SEM BORDA, SÓ O TEXTO!
+   🎀 PASSO 4: TÍTULOS DAS CATEGORIAS - SEM FUNDO
    ========================================== */
 h2 {
     font-size: 38px;
@@ -54,32 +54,44 @@ h2 {
     transition: all 0.3s ease;
 }
 
-/* Efeito mágico quando passa o mouse - só muda a cor! */
 h2:hover {
     color: #D4628C;
     transform: scale(1.02);
 }
 
 /* ==========================================
-   🎬 PASSO 5: VÍDEOS COM MOLDURA DE POLAROIDE
+   🎬 PASSO 5: CONTAINER DOS VÍDEOS - LADO A LADO!
+   ========================================== */
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   🎬 PASSO 6: VÍDEOS COM MOLDURA DE POLAROIDE
    ========================================== */
 iframe {
-    display: block;
-    margin: 20px auto;
     border-radius: 20px;
     box-shadow: 
         0 6px 20px rgba(212, 98, 140, 0.2),
         0 0 0 6px #FFFFFF,
         0 0 0 10px #FFB6C1;
     border: 2px solid #FFFFFF;
-    max-width: 90%;
     transition: all 0.4s ease;
     background: white;
+    width: 300px;
+    height: 200px;
+    flex-shrink: 0;
 }
 
 /* Efeito mágico quando passa o mouse nos vídeos */
 iframe:hover {
-    transform: scale(1.03);
+    transform: scale(1.05) rotate(1deg);
     box-shadow: 
         0 10px 30px rgba(212, 98, 140, 0.35),
         0 0 0 6px #FFFFFF,
@@ -87,7 +99,7 @@ iframe:hover {
 }
 
 /* ==========================================
-   🌈 PASSO 6: LINHAS COM "~" BRANCAS
+   🌈 PASSO 7: LINHAS COM "~" BRANCAS
    ========================================== */
 hr {
     border: none;
@@ -119,7 +131,7 @@ hr::before {
 }
 
 /* ==========================================
-   🎀 PASSO 7: ANIMAÇÃO DE FLUTUAÇÃO
+   🎀 PASSO 8: ANIMAÇÃO DE FLUTUAÇÃO
    ========================================== */
 @keyframes flutuar {
     0%, 100% { 
@@ -131,7 +143,7 @@ hr::before {
 }
 
 /* ==========================================
-   🌸 PASSO 8: KAMOJIS FLUTUANDO NO FUNDO (só os antigos!)
+   🌸 PASSO 9: KAMOJIS FLUTUANDO NO FUNDO
    ========================================== */
 body::before {
     content: "🌸 ૮ ྀིᴗ͈ . ᴗ͈ ྀིა 🧋(̳• · •̳) 🧸(っ•‿•)っ 🎸(⁎˃ᆺ˂) ☕(⑅˘꒳˘) 🌸";
@@ -152,7 +164,7 @@ body::before {
 }
 
 /* ==========================================
-   📱 PASSO 9: FICA LINDO NO CELULAR TAMBÉM!
+   📱 PASSO 10: FICA LINDO NO CELULAR TAMBÉM!
    ========================================== */
 @media (max-width: 700px) {
     h1 {
@@ -165,8 +177,15 @@ body::before {
         padding: 5px 0;
     }
     
+    .videos-container {
+        gap: 15px;
+        padding: 5px;
+    }
+    
     iframe {
-        height: 200px;
+        width: 100%;
+        max-width: 300px;
+        height: 180px;
         border-radius: 15px;
         box-shadow: 
             0 4px 15px rgba(212, 98, 140, 0.2),
@@ -196,7 +215,7 @@ body::before {
 }
 
 /* ==========================================
-   🎨 PASSO 10: SELETOR DE TEXTO BONITINHO
+   🎨 PASSO 11: SELETOR DE TEXTO BONITINHO
    ========================================== */
 ::selection {
     background: #FFB6C1;
@@ -204,7 +223,7 @@ body::before {
 }
 
 /* ==========================================
-   🌸 PASSO 11: SCROLLBAR ESTILIZADA
+   🌸 PASSO 12: SCROLLBAR ESTILIZADA
    ========================================== */
 ::-webkit-scrollbar {
     width: 12px;
